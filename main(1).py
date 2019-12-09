@@ -27,7 +27,7 @@ def refresh(msg):
         else:
             a = int(data['field1'])
             if a >= 3000:
-                bot.sendMessage(chat_id, "A umidade do solo esta muito baixa! | Valor: " + feeds[0]['field1'] + '%') °C
+                bot.sendMessage(chat_id, "A umidade do solo esta muito baixa! | Valor: " + feeds[0]['field1'] + '%')
             if a >= 2000 and a < 3000:
                 bot.sendMessage(chat_id, "A umidade do solo esta otima! | Valor: " + feeds[0]['field1'] + '%')
             if a < 2000:
