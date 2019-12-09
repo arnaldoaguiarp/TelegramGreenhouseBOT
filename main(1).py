@@ -26,19 +26,19 @@ def refresh(msg):
             time.sleep(10)
         else:
             a = int(data['field1'])
-            if a >= 3000:
+            if a < 40:
                 bot.sendMessage(chat_id, "A umidade do solo esta muito baixa! | Valor: " + feeds[0]['field1'] + '%')
-            if a >= 2000 and a < 3000:
+            if a >= 41 and a < 80:
                 bot.sendMessage(chat_id, "A umidade do solo esta otima! | Valor: " + feeds[0]['field1'] + '%')
-            if a < 2000:
+            if a <= 81:
                 bot.sendMessage(chat_id, "A umidade do solo esta muito alta! | Valor: " + feeds[0]['field1'] + '%')
                 
             b = int(data['field2'])
-            if a >= 3000:
+            if a <13:
                 bot.sendMessage(chat_id, "A umidade do solo esta muito baixa! | Valor: " + feeds[1]['field2'] + '°C') 
-            if a >= 2000 and a < 3000:
+            if a >= 14 and a < 35:
                 bot.sendMessage(chat_id, "A umidade do solo esta otima! | Valor: " + feeds[1]['field2'] + '°C')
-            if a < 2000:
+            if a >= 36:
                 bot.sendMessage(chat_id, "A umidade do solo esta muito alta! | Valor: " + feeds[1]['field2'] + '°C')
                 
         TS.close()
